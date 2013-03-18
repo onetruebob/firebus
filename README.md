@@ -1,6 +1,9 @@
 # SF Live Bus iOS App
 
-SF Live Bus is a simple technical demonstration of the Firebase iOS API. 
+SF Live Bus is a simple technical demonstration of the Firebase iOS API. The
+app shows the current position of every bus in San Francisco. Each pin
+represents a bus.  Bus positions are updated in realtime. 🚌 No more pull to
+refresh!
 
 Grab it from the [App Store](https://itunes.apple.com/us/app/sf-live-bus/id617065339?ls=1&mt=8).
 
