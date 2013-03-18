@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED0FA55216E7CED80071104B /* FBusMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0FA55116E7CED80071104B /* FBusMetadata.m */; };
+		ED0FA55416E7DA040071104B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0FA55316E7DA040071104B /* QuartzCore.framework */; };
+		ED52736016E9AD3A00E51322 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ED52735F16E9AD3A00E51322 /* MBProgressHUD.m */; };
+		EDA0F11816F6A83C00165FE3 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA0F11716F6A83C00165FE3 /* Firebase.framework */; };
+		EDCE3C0816EA727300462B5B /* firebase-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDCE3C0616EA727300462B5B /* firebase-logo@2x.png */; };
+		EDCE3C0916EA727300462B5B /* firebase-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EDCE3C0716EA727300462B5B /* firebase-logo.png */; };
+		EDE26E7816E6C267006A4A80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE26E7716E6C267006A4A80 /* UIKit.framework */; };
+		EDE26E7A16E6C267006A4A80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE26E7916E6C267006A4A80 /* Foundation.framework */; };
+		EDE26E7C16E6C267006A4A80 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE26E7B16E6C267006A4A80 /* CoreGraphics.framework */; };
+		EDE26E8216E6C267006A4A80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDE26E8016E6C267006A4A80 /* InfoPlist.strings */; };
+		EDE26E8416E6C267006A4A80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE26E8316E6C267006A4A80 /* main.m */; };
+		EDE26E8816E6C267006A4A80 /* FBusAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE26E8716E6C267006A4A80 /* FBusAppDelegate.m */; };
+		EDE26E8A16E6C267006A4A80 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE26E8916E6C267006A4A80 /* Default.png */; };
+		EDE26E8C16E6C267006A4A80 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE26E8B16E6C267006A4A80 /* Default@2x.png */; };
+		EDE26E8E16E6C267006A4A80 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE26E8D16E6C267006A4A80 /* Default-568h@2x.png */; };
+		EDE26E9116E6C267006A4A80 /* FBusMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE26E9016E6C267006A4A80 /* FBusMainViewController.m */; };
+		EDE26E9416E6C267006A4A80 /* FBusFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE26E9316E6C267006A4A80 /* FBusFlipsideViewController.m */; };
+		EDE26E9716E6C267006A4A80 /* FBusMainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE26E9516E6C267006A4A80 /* FBusMainViewController_iPhone.xib */; };
+		EDE26E9A16E6C267006A4A80 /* FBusMainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE26E9816E6C267006A4A80 /* FBusMainViewController_iPad.xib */; };
+		EDE26E9D16E6C267006A4A80 /* FBusFlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE26E9B16E6C267006A4A80 /* FBusFlipsideViewController.xib */; };
+		EDE26EA516E6C267006A4A80 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE26EA416E6C267006A4A80 /* SenTestingKit.framework */; };
+		EDE26EA616E6C267006A4A80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE26E7716E6C267006A4A80 /* UIKit.framework */; };
+		EDE26EA716E6C267006A4A80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE26E7916E6C267006A4A80 /* Foundation.framework */; };
+		EDE26EAF16E6C267006A4A80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDE26EAD16E6C267006A4A80 /* InfoPlist.strings */; };
+		EDE26EB216E6C267006A4A80 /* FirebusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE26EB116E6C267006A4A80 /* FirebusTests.m */; };
+		EDE26EBE16E6C7DF006A4A80 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE26EBD16E6C7DF006A4A80 /* CFNetwork.framework */; };
+		EDE26EC016E6C7E7006A4A80 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE26EBF16E6C7E7006A4A80 /* Security.framework */; };
+		EDE26EC216E6C7EC006A4A80 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE26EC116E6C7EC006A4A80 /* libicucore.dylib */; };
+		EDE26EC416E6CC0B006A4A80 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE26EC316E6CC0B006A4A80 /* MapKit.framework */; };
+		EDE26EC616E6DB62006A4A80 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE26EC516E6DB62006A4A80 /* CoreLocation.framework */; };
+		EDFECF9B16EAA29B00DA52AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EDFECF9A16EAA29B00DA52AA /* Icon.png */; };
+		EDFECF9D16EAA2A100DA52AA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDFECF9C16EAA2A100DA52AA /* Icon@2x.png */; };
+		EDFECF9F16EAA2AD00DA52AA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = EDFECF9E16EAA2AD00DA52AA /* Icon-72.png */; };
+		EDFECFA116EAA2B100DA52AA /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDFECFA016EAA2B100DA52AA /* Icon-72@2x.png */; };
+		EDFECFA916EAA31D00DA52AA /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EDFECFA816EAA31D00DA52AA /* Default-Portrait~ipad.png */; };
+		EDFECFAB16EAA33100DA52AA /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EDFECFAA16EAA33100DA52AA /* Default-Portrait@2x~ipad.png */; };
+		EDFECFAD16EAA34100DA52AA /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EDFECFAC16EAA34100DA52AA /* Default-Landscape~ipad.png */; };
+		EDFECFAF16EAA35A00DA52AA /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EDFECFAE16EAA35A00DA52AA /* Default-Landscape@2x~ipad.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDE26EA816E6C267006A4A80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDE26E6C16E6C267006A4A80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDE26E7316E6C267006A4A80;
+			remoteInfo = Firebus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED0FA55016E7CED80071104B /* FBusMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBusMetadata.h; sourceTree = "<group>"; };
+		ED0FA55116E7CED80071104B /* FBusMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBusMetadata.m; sourceTree = "<group>"; };
+		ED0FA55316E7DA040071104B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ED52735E16E9AD3A00E51322 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		ED52735F16E9AD3A00E51322 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		EDA0F11716F6A83C00165FE3 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		EDCE3C0616EA727300462B5B /* firebase-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "firebase-logo@2x.png"; sourceTree = "<group>"; };
+		EDCE3C0716EA727300462B5B /* firebase-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "firebase-logo.png"; sourceTree = "<group>"; };
+		EDE26E7416E6C267006A4A80 /* Firebus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firebus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE26E7716E6C267006A4A80 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EDE26E7916E6C267006A4A80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EDE26E7B16E6C267006A4A80 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EDE26E7F16E6C267006A4A80 /* Firebus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Firebus-Info.plist"; sourceTree = "<group>"; };
+		EDE26E8116E6C267006A4A80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EDE26E8316E6C267006A4A80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EDE26E8516E6C267006A4A80 /* Firebus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Firebus-Prefix.pch"; sourceTree = "<group>"; };
+		EDE26E8616E6C267006A4A80 /* FBusAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBusAppDelegate.h; sourceTree = "<group>"; };
+		EDE26E8716E6C267006A4A80 /* FBusAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBusAppDelegate.m; sourceTree = "<group>"; };
+		EDE26E8916E6C267006A4A80 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		EDE26E8B16E6C267006A4A80 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		EDE26E8D16E6C267006A4A80 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EDE26E8F16E6C267006A4A80 /* FBusMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBusMainViewController.h; sourceTree = "<group>"; };
+		EDE26E9016E6C267006A4A80 /* FBusMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBusMainViewController.m; sourceTree = "<group>"; };
+		EDE26E9216E6C267006A4A80 /* FBusFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBusFlipsideViewController.h; sourceTree = "<group>"; };
+		EDE26E9316E6C267006A4A80 /* FBusFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBusFlipsideViewController.m; sourceTree = "<group>"; };
+		EDE26E9616E6C267006A4A80 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FBusMainViewController_iPhone.xib; sourceTree = "<group>"; };
+		EDE26E9916E6C267006A4A80 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FBusMainViewController_iPad.xib; sourceTree = "<group>"; };
+		EDE26E9C16E6C267006A4A80 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FBusFlipsideViewController.xib; sourceTree = "<group>"; };
+		EDE26EA316E6C267006A4A80 /* FirebusTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebusTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE26EA416E6C267006A4A80 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		EDE26EAC16E6C267006A4A80 /* FirebusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FirebusTests-Info.plist"; sourceTree = "<group>"; };
+		EDE26EAE16E6C267006A4A80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EDE26EB016E6C267006A4A80 /* FirebusTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirebusTests.h; sourceTree = "<group>"; };
+		EDE26EB116E6C267006A4A80 /* FirebusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirebusTests.m; sourceTree = "<group>"; };
+		EDE26EBD16E6C7DF006A4A80 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EDE26EBF16E6C7E7006A4A80 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EDE26EC116E6C7EC006A4A80 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		EDE26EC316E6CC0B006A4A80 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EDE26EC516E6DB62006A4A80 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EDFECF9A16EAA29B00DA52AA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../Icon.png; sourceTree = "<group>"; };
+		EDFECF9C16EAA2A100DA52AA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Icon@2x.png"; sourceTree = "<group>"; };
+		EDFECF9E16EAA2AD00DA52AA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../../Icon-72.png"; sourceTree = "<group>"; };
+		EDFECFA016EAA2B100DA52AA /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../../Icon-72@2x.png"; sourceTree = "<group>"; };
+		EDFECFA216EAA2D200DA52AA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../Default@2x.png"; sourceTree = "<group>"; };
+		EDFECFA416EAA2E500DA52AA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
+		EDFECFA616EAA2FB00DA52AA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../Default.png; sourceTree = "<group>"; };
+		EDFECFA816EAA31D00DA52AA /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		EDFECFAA16EAA33100DA52AA /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		EDFECFAC16EAA34100DA52AA /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		EDFECFAE16EAA35A00DA52AA /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~ipad.png"; path = "../../Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDE26E7116E6C267006A4A80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED0FA55416E7DA040071104B /* QuartzCore.framework in Frameworks */,
+				EDE26EC616E6DB62006A4A80 /* CoreLocation.framework in Frameworks */,
+				EDE26EC416E6CC0B006A4A80 /* MapKit.framework in Frameworks */,
+				EDE26EC216E6C7EC006A4A80 /* libicucore.dylib in Frameworks */,
+				EDE26EC016E6C7E7006A4A80 /* Security.framework in Frameworks */,
+				EDE26EBE16E6C7DF006A4A80 /* CFNetwork.framework in Frameworks */,
+				EDE26E7816E6C267006A4A80 /* UIKit.framework in Frameworks */,
+				EDE26E7A16E6C267006A4A80 /* Foundation.framework in Frameworks */,
+				EDE26E7C16E6C267006A4A80 /* CoreGraphics.framework in Frameworks */,
+				EDA0F11816F6A83C00165FE3 /* Firebase.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE26E9F16E6C267006A4A80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE26EA516E6C267006A4A80 /* SenTestingKit.framework in Frameworks */,
+				EDE26EA616E6C267006A4A80 /* UIKit.framework in Frameworks */,
+				EDE26EA716E6C267006A4A80 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED0FA55616E83C380071104B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EDFECFAE16EAA35A00DA52AA /* Default-Landscape@2x~ipad.png */,
+				EDFECFAC16EAA34100DA52AA /* Default-Landscape~ipad.png */,
+				EDFECFAA16EAA33100DA52AA /* Default-Portrait@2x~ipad.png */,
+				EDFECFA816EAA31D00DA52AA /* Default-Portrait~ipad.png */,
+				EDFECFA616EAA2FB00DA52AA /* Default.png */,
+				EDFECFA416EAA2E500DA52AA /* Default-568h@2x.png */,
+				EDFECFA216EAA2D200DA52AA /* Default@2x.png */,
+				EDFECFA016EAA2B100DA52AA /* Icon-72@2x.png */,
+				EDFECF9E16EAA2AD00DA52AA /* Icon-72.png */,
+				EDFECF9C16EAA2A100DA52AA /* Icon@2x.png */,
+				EDFECF9A16EAA29B00DA52AA /* Icon.png */,
+				EDCE3C0616EA727300462B5B /* firebase-logo@2x.png */,
+				EDCE3C0716EA727300462B5B /* firebase-logo.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		EDE26E6B16E6C267006A4A80 = {
+			isa = PBXGroup;
+			children = (
+				EDE26E7D16E6C267006A4A80 /* Firebus */,
+				EDE26EAA16E6C267006A4A80 /* FirebusTests */,
+				EDE26E7616E6C267006A4A80 /* Frameworks */,
+				EDE26E7516E6C267006A4A80 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDE26E7516E6C267006A4A80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDE26E7416E6C267006A4A80 /* Firebus.app */,
+				EDE26EA316E6C267006A4A80 /* FirebusTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDE26E7616E6C267006A4A80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDA0F11716F6A83C00165FE3 /* Firebase.framework */,
+				ED0FA55316E7DA040071104B /* QuartzCore.framework */,
+				EDE26EC516E6DB62006A4A80 /* CoreLocation.framework */,
+				EDE26EC316E6CC0B006A4A80 /* MapKit.framework */,
+				EDE26EC116E6C7EC006A4A80 /* libicucore.dylib */,
+				EDE26EBF16E6C7E7006A4A80 /* Security.framework */,
+				EDE26EBD16E6C7DF006A4A80 /* CFNetwork.framework */,
+				EDE26E7716E6C267006A4A80 /* UIKit.framework */,
+				EDE26E7916E6C267006A4A80 /* Foundation.framework */,
+				EDE26E7B16E6C267006A4A80 /* CoreGraphics.framework */,
+				EDE26EA416E6C267006A4A80 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDE26E7D16E6C267006A4A80 /* Firebus */ = {
+			isa = PBXGroup;
+			children = (
+				ED0FA55616E83C380071104B /* Assets */,
+				EDE26E8616E6C267006A4A80 /* FBusAppDelegate.h */,
+				EDE26E8716E6C267006A4A80 /* FBusAppDelegate.m */,
+				EDE26E8F16E6C267006A4A80 /* FBusMainViewController.h */,
+				EDE26E9016E6C267006A4A80 /* FBusMainViewController.m */,
+				EDE26E9216E6C267006A4A80 /* FBusFlipsideViewController.h */,
+				EDE26E9316E6C267006A4A80 /* FBusFlipsideViewController.m */,
+				EDE26E9516E6C267006A4A80 /* FBusMainViewController_iPhone.xib */,
+				EDE26E9816E6C267006A4A80 /* FBusMainViewController_iPad.xib */,
+				EDE26E9B16E6C267006A4A80 /* FBusFlipsideViewController.xib */,
+				ED0FA55016E7CED80071104B /* FBusMetadata.h */,
+				ED0FA55116E7CED80071104B /* FBusMetadata.m */,
+				ED52735E16E9AD3A00E51322 /* MBProgressHUD.h */,
+				ED52735F16E9AD3A00E51322 /* MBProgressHUD.m */,
+				EDE26E7E16E6C267006A4A80 /* Supporting Files */,
+			);
+			path = Firebus;
+			sourceTree = "<group>";
+		};
+		EDE26E7E16E6C267006A4A80 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDE26E7F16E6C267006A4A80 /* Firebus-Info.plist */,
+				EDE26E8016E6C267006A4A80 /* InfoPlist.strings */,
+				EDE26E8316E6C267006A4A80 /* main.m */,
+				EDE26E8516E6C267006A4A80 /* Firebus-Prefix.pch */,
+				EDE26E8916E6C267006A4A80 /* Default.png */,
+				EDE26E8B16E6C267006A4A80 /* Default@2x.png */,
+				EDE26E8D16E6C267006A4A80 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDE26EAA16E6C267006A4A80 /* FirebusTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDE26EB016E6C267006A4A80 /* FirebusTests.h */,
+				EDE26EB116E6C267006A4A80 /* FirebusTests.m */,
+				EDE26EAB16E6C267006A4A80 /* Supporting Files */,
+			);
+			path = FirebusTests;
+			sourceTree = "<group>";
+		};
+		EDE26EAB16E6C267006A4A80 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDE26EAC16E6C267006A4A80 /* FirebusTests-Info.plist */,
+				EDE26EAD16E6C267006A4A80 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDE26E7316E6C267006A4A80 /* Firebus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE26EB516E6C267006A4A80 /* Build configuration list for PBXNativeTarget "Firebus" */;
+			buildPhases = (
+				EDE26E7016E6C267006A4A80 /* Sources */,
+				EDE26E7116E6C267006A4A80 /* Frameworks */,
+				EDE26E7216E6C267006A4A80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Firebus;
+			productName = Firebus;
+			productReference = EDE26E7416E6C267006A4A80 /* Firebus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDE26EA216E6C267006A4A80 /* FirebusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE26EB816E6C267006A4A80 /* Build configuration list for PBXNativeTarget "FirebusTests" */;
+			buildPhases = (
+				EDE26E9E16E6C267006A4A80 /* Sources */,
+				EDE26E9F16E6C267006A4A80 /* Frameworks */,
+				EDE26EA016E6C267006A4A80 /* Resources */,
+				EDE26EA116E6C267006A4A80 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDE26EA916E6C267006A4A80 /* PBXTargetDependency */,
+			);
+			name = FirebusTests;
+			productName = FirebusTests;
+			productReference = EDE26EA316E6C267006A4A80 /* FirebusTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDE26E6C16E6C267006A4A80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FBus;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Firebase;
+			};
+			buildConfigurationList = EDE26E6F16E6C267006A4A80 /* Build configuration list for PBXProject "Firebus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EDE26E6B16E6C267006A4A80;
+			productRefGroup = EDE26E7516E6C267006A4A80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDE26E7316E6C267006A4A80 /* Firebus */,
+				EDE26EA216E6C267006A4A80 /* FirebusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDE26E7216E6C267006A4A80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE26E8216E6C267006A4A80 /* InfoPlist.strings in Resources */,
+				EDE26E8A16E6C267006A4A80 /* Default.png in Resources */,
+				EDE26E8C16E6C267006A4A80 /* Default@2x.png in Resources */,
+				EDE26E8E16E6C267006A4A80 /* Default-568h@2x.png in Resources */,
+				EDE26E9716E6C267006A4A80 /* FBusMainViewController_iPhone.xib in Resources */,
+				EDE26E9A16E6C267006A4A80 /* FBusMainViewController_iPad.xib in Resources */,
+				EDE26E9D16E6C267006A4A80 /* FBusFlipsideViewController.xib in Resources */,
+				EDCE3C0816EA727300462B5B /* firebase-logo@2x.png in Resources */,
+				EDCE3C0916EA727300462B5B /* firebase-logo.png in Resources */,
+				EDFECF9B16EAA29B00DA52AA /* Icon.png in Resources */,
+				EDFECF9D16EAA2A100DA52AA /* Icon@2x.png in Resources */,
+				EDFECF9F16EAA2AD00DA52AA /* Icon-72.png in Resources */,
+				EDFECFA116EAA2B100DA52AA /* Icon-72@2x.png in Resources */,
+				EDFECFA916EAA31D00DA52AA /* Default-Portrait~ipad.png in Resources */,
+				EDFECFAB16EAA33100DA52AA /* Default-Portrait@2x~ipad.png in Resources */,
+				EDFECFAD16EAA34100DA52AA /* Default-Landscape~ipad.png in Resources */,
+				EDFECFAF16EAA35A00DA52AA /* Default-Landscape@2x~ipad.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE26EA016E6C267006A4A80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE26EAF16E6C267006A4A80 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EDE26EA116E6C267006A4A80 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDE26E7016E6C267006A4A80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE26E8416E6C267006A4A80 /* main.m in Sources */,
+				EDE26E8816E6C267006A4A80 /* FBusAppDelegate.m in Sources */,
+				EDE26E9116E6C267006A4A80 /* FBusMainViewController.m in Sources */,
+				EDE26E9416E6C267006A4A80 /* FBusFlipsideViewController.m in Sources */,
+				ED0FA55216E7CED80071104B /* FBusMetadata.m in Sources */,
+				ED52736016E9AD3A00E51322 /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE26E9E16E6C267006A4A80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE26EB216E6C267006A4A80 /* FirebusTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDE26EA916E6C267006A4A80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDE26E7316E6C267006A4A80 /* Firebus */;
+			targetProxy = EDE26EA816E6C267006A4A80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EDE26E8016E6C267006A4A80 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDE26E8116E6C267006A4A80 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EDE26E9516E6C267006A4A80 /* FBusMainViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDE26E9616E6C267006A4A80 /* en */,
+			);
+			name = FBusMainViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		EDE26E9816E6C267006A4A80 /* FBusMainViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDE26E9916E6C267006A4A80 /* en */,
+			);
+			name = FBusMainViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		EDE26E9B16E6C267006A4A80 /* FBusFlipsideViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDE26E9C16E6C267006A4A80 /* en */,
+			);
+			name = FBusFlipsideViewController.xib;
+			sourceTree = "<group>";
+		};
+		EDE26EAD16E6C267006A4A80 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDE26EAE16E6C267006A4A80 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDE26EB316E6C267006A4A80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDE26EB416E6C267006A4A80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDE26EB616E6C267006A4A80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../../../Library/Developer/Xcode/DerivedData/Firebase-ezgunhcbgcgeocbeydovmmjdksxa/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Firebus/Firebus-Prefix.pch";
+				INFOPLIST_FILE = "Firebus/Firebus-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EDE26EB716E6C267006A4A80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Envolve, Inc.";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../../../Library/Developer/Xcode/DerivedData/Firebase-ezgunhcbgcgeocbeydovmmjdksxa/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Firebus/Firebus-Prefix.pch";
+				INFOPLIST_FILE = "Firebus/Firebus-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C9AF0D5A-94D1-43C3-BDFC-633862BD23E2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EDE26EB916E6C267006A4A80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Firebus.app/Firebus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Firebus/Firebus-Prefix.pch";
+				INFOPLIST_FILE = "FirebusTests/FirebusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		EDE26EBA16E6C267006A4A80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Firebus.app/Firebus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Firebus/Firebus-Prefix.pch";
+				INFOPLIST_FILE = "FirebusTests/FirebusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDE26E6F16E6C267006A4A80 /* Build configuration list for PBXProject "Firebus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE26EB316E6C267006A4A80 /* Debug */,
+				EDE26EB416E6C267006A4A80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE26EB516E6C267006A4A80 /* Build configuration list for PBXNativeTarget "Firebus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE26EB616E6C267006A4A80 /* Debug */,
+				EDE26EB716E6C267006A4A80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE26EB816E6C267006A4A80 /* Build configuration list for PBXNativeTarget "FirebusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE26EB916E6C267006A4A80 /* Debug */,
+				EDE26EBA16E6C267006A4A80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDE26E6C16E6C267006A4A80 /* Project object */;
+}
