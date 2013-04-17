@@ -14,7 +14,8 @@ var f = new Firebase("https://firebus.firebaseio.com/sf-muni");
 
 function newBus(bus, firebaseId) {
     var busLatLng = new google.maps.LatLng(bus.lat, bus.lon);
-    var marker = new google.maps.Marker({ icon: 'http://chart.googleapis.com/chart?chst=d_bubble_icon_text_small&chld=bus|bbT|'+bus.routeTag+'|FF6262|eee', position: busLatLng, map: map });
+    var directionColor = bus.dirTag && bus.dirTag.indexOf('OB') > -1 ? "7094FF" : "FF6262";
+    var marker = new google.maps.Marker({ icon: 'http://chart.googleapis.com/chart?chst=d_bubble_icon_text_small&chld=bus|bbT|'+bus.routeTag+'|' + directionColor + '|eee', position: busLatLng, map: map });
     buses[firebaseId] = marker;
 }
 
