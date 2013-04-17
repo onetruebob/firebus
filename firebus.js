@@ -13,14 +13,10 @@ function initialize() {
 var f = new Firebase("https://firebus.firebaseio.com/sf-muni");
 
 function newBus(bus, firebaseId) {
+    console.log(bus)
     var busLatLng = new google.maps.LatLng(bus.lat, bus.lon);
-    var contentString = "Route " + bus.routeTag;
-    var infowindow = new google.maps.InfoWindow({ content: contentString });
-    var marker = new google.maps.Marker({ icon: 'muni.png', position: busLatLng, map: map, title: contentString });
+    var marker = new google.maps.Marker({ icon: 'http://chart.googleapis.com/chart?chst=d_bubble_icon_text_small&chld=bus|bbT|'+bus.routeTag+'|FF0000|FFFFFF', position: busLatLng, map: map });
     buses[firebaseId] = marker;
-    google.maps.event.addListener(marker, 'click', function() {
-      infowindow.open(map,marker);
-    });
 }
 
 f.once("value", function(s) {
