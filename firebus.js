@@ -13,7 +13,6 @@ function initialize() {
 var f = new Firebase("https://firebus.firebaseio.com/sf-muni");
 
 function newBus(bus, firebaseId) {
-    console.log(bus)
     var busLatLng = new google.maps.LatLng(bus.lat, bus.lon);
     var marker = new google.maps.Marker({ icon: 'http://chart.googleapis.com/chart?chst=d_bubble_icon_text_small&chld=bus|bbT|'+bus.routeTag+'|FF0000|FFFFFF', position: busLatLng, map: map });
     buses[firebaseId] = marker;
