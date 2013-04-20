@@ -11,7 +11,7 @@ google.maps.Marker.prototype.animatedMoveTo = function(toLat, toLng) {
     return;
     
   // store a LatLng for each step of the animation
-  frames = [];
+  var frames = [];
   for (var percent = 0; percent < 1; percent += 0.005) {
     curLat = fromLat + percent * (toLat - fromLat);
     curLng = fromLng + percent * (toLng - fromLng);
