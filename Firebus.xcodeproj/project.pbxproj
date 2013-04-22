@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED08D3C51725B4E8007E6D2D /* FBusImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = ED08D3C41725B4E8007E6D2D /* FBusImageUtils.m */; };
+		ED08D3C81725BC93007E6D2D /* FBusPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED08D3C71725BC93007E6D2D /* FBusPointAnnotation.m */; };
 		ED0FA55216E7CED80071104B /* FBusMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0FA55116E7CED80071104B /* FBusMetadata.m */; };
 		ED0FA55416E7DA040071104B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0FA55316E7DA040071104B /* QuartzCore.framework */; };
 		ED52736016E9AD3A00E51322 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ED52735F16E9AD3A00E51322 /* MBProgressHUD.m */; };
@@ -58,6 +60,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED08D3C31725B4E8007E6D2D /* FBusImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBusImageUtils.h; sourceTree = "<group>"; };
+		ED08D3C41725B4E8007E6D2D /* FBusImageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBusImageUtils.m; sourceTree = "<group>"; };
+		ED08D3C61725BC93007E6D2D /* FBusPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBusPointAnnotation.h; sourceTree = "<group>"; };
+		ED08D3C71725BC93007E6D2D /* FBusPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBusPointAnnotation.m; sourceTree = "<group>"; };
 		ED0FA55016E7CED80071104B /* FBusMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBusMetadata.h; sourceTree = "<group>"; };
 		ED0FA55116E7CED80071104B /* FBusMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBusMetadata.m; sourceTree = "<group>"; };
 		ED0FA55316E7DA040071104B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -215,6 +221,10 @@
 				ED0FA55116E7CED80071104B /* FBusMetadata.m */,
 				ED52735E16E9AD3A00E51322 /* MBProgressHUD.h */,
 				ED52735F16E9AD3A00E51322 /* MBProgressHUD.m */,
+				ED08D3C31725B4E8007E6D2D /* FBusImageUtils.h */,
+				ED08D3C41725B4E8007E6D2D /* FBusImageUtils.m */,
+				ED08D3C61725BC93007E6D2D /* FBusPointAnnotation.h */,
+				ED08D3C71725BC93007E6D2D /* FBusPointAnnotation.m */,
 				EDE26E7E16E6C267006A4A80 /* Supporting Files */,
 			);
 			path = Firebus;
@@ -382,6 +392,8 @@
 				EDE26E9416E6C267006A4A80 /* FBusFlipsideViewController.m in Sources */,
 				ED0FA55216E7CED80071104B /* FBusMetadata.m in Sources */,
 				ED52736016E9AD3A00E51322 /* MBProgressHUD.m in Sources */,
+				ED08D3C51725B4E8007E6D2D /* FBusImageUtils.m in Sources */,
+				ED08D3C81725BC93007E6D2D /* FBusPointAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

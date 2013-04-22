@@ -9,7 +9,7 @@
 #import "FBusFlipsideViewController.h"
 #import <MapKit/MapKit.h>
 
-@interface FBusMainViewController : UIViewController <FBusFlipsideViewControllerDelegate>
+@interface FBusMainViewController : UIViewController <FBusFlipsideViewControllerDelegate, MKMapViewDelegate>
 
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
 @property (strong, nonatomic) NSMutableDictionary *busLocations;

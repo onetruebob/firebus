@@ -9,6 +9,8 @@
 #import "FBusMainViewController.h"
 #import "FBusMetadata.h"
 #import "MBProgressHUD.h"
+#import "FBusImageUtils.h"
+#import "FBusPointAnnotation.h"
 #import <Firebase/Firebase.h>
 #import <CoreLocation/CLLocation.h>
 #import <QuartzCore/QuartzCore.h>
@@ -27,6 +29,7 @@
     [super viewDidLoad];
     
     self.busLocations = [[NSMutableDictionary alloc] init];
+    self.map.delegate = self;
 
     [self moveMapToSF];
     [self setupOpacityTimer];
@@ -98,7 +101,7 @@
         NSDictionary *metadata = busMetadata.metadata;
         
         double age = [[NSDate date] timeIntervalSince1970] - [[metadata objectForKey:@"ts"] doubleValue];
-        double alpha = (age > 60) ? 0.07 : (1.0 - (age / 60.0)); // ghost bus if GPS is stale
+        double alpha = (age > 150) ? 0.07 : (1.0 - (age / 150.0)); // ghost bus if GPS is stale
         
         MKAnnotationView* busView = [self.map viewForAnnotation:busPin];
         
@@ -121,9 +124,13 @@
 - (void) addBusToMap:(NSDictionary *)bus withId:(NSString *)key {
         dispatch_async(dispatch_get_main_queue(), ^{
             if( bus && ![self.busLocations objectForKey:key]) {
-                MKPointAnnotation *busPin = [[MKPointAnnotation alloc] init];
+                FBusPointAnnotation *busPin = [[FBusPointAnnotation alloc] init];
+                
                 [busPin setCoordinate:CLLocationCoordinate2DMake([[bus objectForKey:@"lat"] doubleValue], [[bus objectForKey:@"lon"] doubleValue])];
                 [busPin setTitle:[[bus objectForKey:@"routeTag"] description]];
+                busPin.key = key;
+                busPin.route = [[bus objectForKey:@"routeTag"] description];
+                busPin.outbound =  ! ([[bus objectForKey:@"dirTag"] rangeOfString:@"OB"].location == NSNotFound);
                 
                 FBusMetadata* busMetadata = [[FBusMetadata alloc] init];
                 busMetadata.metadata = bus;
@@ -197,6 +204,32 @@
             [self.flipsidePopoverController presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
         }
     }
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    
+    MKAnnotationView *pinView = nil;
+    if(annotation != mapView.userLocation)
+    {
+        FBusPointAnnotation *busAnnotation = (FBusPointAnnotation *)annotation;
+        
+        pinView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:busAnnotation.key];
+
+        if(pinView == nil)
+            pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:busAnnotation.key];
+    
+        pinView.canShowCallout = NO;
+
+        UIImage *image = [FBusImageUtils imageFromText:busAnnotation.route isOutbound:busAnnotation.outbound];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        imageView.layer.cornerRadius = 5.0;
+        imageView.layer.masksToBounds = YES;
+        imageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        imageView.layer.borderWidth = 1.0;
+        
+        [pinView addSubview:imageView];
+    }
+    return pinView;    
 }
 
 @end
