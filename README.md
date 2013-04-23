@@ -2,7 +2,7 @@
 
 The web version of SF Live Bus; this code lives in the gh-pages branch of the `firebus` repo.
 
-![Screenshot](http://i.imgur.com/hZcbs8i.png)
+![Screenshot](http://i.imgur.com/aWcugTq.jpg)
 
 # [Live Demo](http://firebase.github.io/firebus/)
 
