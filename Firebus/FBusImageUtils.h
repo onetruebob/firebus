@@ -10,7 +10,7 @@
 
 @interface FBusImageUtils : NSObject
 
-+ (UIImage *) imageFromText:(NSString *)text isOutbound:(BOOL) outbound;
++ (UIImage *)imageFromText:(NSString *)text isOutbound:(BOOL) outbound forVehicleType:(NSString *)vtype;
 + (NSString *) getEmojiForRoute:(NSString *) route;
 
 @end

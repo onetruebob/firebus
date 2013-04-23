@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSString* key;
 @property (nonatomic, strong) NSString* route;
+@property (nonatomic, strong) NSString* vtype;
 @property (nonatomic) BOOL outbound;
 
 @end

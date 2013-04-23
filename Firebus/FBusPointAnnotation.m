@@ -13,5 +13,6 @@
 @synthesize key;
 @synthesize route;
 @synthesize outbound;
+@synthesize vtype;
 
 @end

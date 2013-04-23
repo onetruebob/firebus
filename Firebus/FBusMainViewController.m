@@ -131,6 +131,7 @@
                 busPin.key = key;
                 busPin.route = [[bus objectForKey:@"routeTag"] description];
                 busPin.outbound =  ! ([[bus objectForKey:@"dirTag"] rangeOfString:@"OB"].location == NSNotFound);
+                busPin.vtype = [bus objectForKey:@"vtype"];
                 
                 FBusMetadata* busMetadata = [[FBusMetadata alloc] init];
                 busMetadata.metadata = bus;
@@ -220,7 +221,7 @@
     
         pinView.canShowCallout = NO;
 
-        UIImage *image = [FBusImageUtils imageFromText:busAnnotation.route isOutbound:busAnnotation.outbound];
+        UIImage *image = [FBusImageUtils imageFromText:busAnnotation.route isOutbound:busAnnotation.outbound forVehicleType:busAnnotation.vtype];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         imageView.layer.cornerRadius = 5.0;
         imageView.layer.masksToBounds = YES;

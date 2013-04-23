@@ -11,9 +11,9 @@
 @implementation FBusImageUtils
 
 // Based on http://stackoverflow.com/a/2768081/1843780
-+(UIImage *)imageFromText:(NSString *)text isOutbound:(BOOL) outbound
++ (UIImage *)imageFromText:(NSString *)text isOutbound:(BOOL) outbound forVehicleType:(NSString *)vtype
 {    
-    NSString* busText = [NSString stringWithFormat:@" %@ %@ ", [FBusImageUtils getEmojiForRoute:text], text];
+    NSString* busText = [NSString stringWithFormat:@" %@ %@ ", [FBusImageUtils getEmojiForRoute:vtype], text];
     // set the font type and size
     UIFont *font = [UIFont systemFontOfSize:17.0];
     CGSize size  = [busText sizeWithFont:font];
@@ -42,9 +42,8 @@
     return image;
 }
 
-+ (NSString *) getEmojiForRoute:(NSString *) route {
-    // Includes N, NX, K, T, and KT.
-    return [@"FJLMNXKT" rangeOfString:route].location == NSNotFound ? @"🚌" : @"🚃";
++ (NSString *) getEmojiForRoute:(NSString *) vtype {
+    return [vtype isEqualToString:@"bus"] ? @"🚌" : @"🚃";
 }
 
 @end
