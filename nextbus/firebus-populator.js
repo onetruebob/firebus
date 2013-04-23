@@ -57,6 +57,7 @@ function updateFirebaseWithData() {
              var firebaseId = crc.crc32(vehicle.id + vehicle.routeTag);
              vehicle = traverseAndCoerce(vehicle);
 	     vehicle.ts = (Date.now() / 1000) - vehicle.secsSinceReport;
+	     vehicle.vtype = 'FJLMNXKT'.indexOf(vehicle.routeTag) > -1 ? 'train' : 'bus'; 
 	     firebusRef.child(agency).child(firebaseId).set(vehicle);
            }
 	   else {
