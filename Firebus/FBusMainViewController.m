@@ -101,7 +101,7 @@
         NSDictionary *metadata = busMetadata.metadata;
         
         double age = [[NSDate date] timeIntervalSince1970] - [[metadata objectForKey:@"ts"] doubleValue];
-        double alpha = (age > 150) ? 0.07 : (1.0 - (age / 150.0)); // ghost bus if GPS is stale
+        double alpha = (age > 60) ? 0.01 : (1.0 - (age / 60.0)); // ghost bus if GPS is stale
         
         MKAnnotationView* busView = [self.map viewForAnnotation:busPin];
         
