@@ -10,7 +10,7 @@ function initialize() {
   map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 }
       
-var f = new Firebase("https://firebus.firebaseio.com/sf-muni");
+var f = new Firebase("https://publicdata-transit.firebaseio.com/sf-muni");
 
 function newBus(bus, firebaseId) {
     var busLatLng = new google.maps.LatLng(bus.lat, bus.lon);
