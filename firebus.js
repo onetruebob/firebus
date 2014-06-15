@@ -1,9 +1,12 @@
-var buses = { };
+var buses = {};
+var busesRoutes = {};
+var routes = {};
+var filteredRoutes = [];
 var map;
 
 function initialize() {
   var mapOptions = {
-    center: new google.maps.LatLng(37.7789, -122.3917),
+    center: new google.maps.LatLng(37.761513, -122.476919),
     zoom: 15,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
@@ -13,11 +16,20 @@ function initialize() {
 var f = new Firebase("https://publicdata-transit.firebaseio.com/sf-muni/data");
 
 function newBus(bus, firebaseId) {
-    var busLatLng = new google.maps.LatLng(bus.lat, bus.lon);
-    var directionColor = bus.dirTag && bus.dirTag.indexOf('OB') > -1 ? "7094FF" : "FF6262";
-    var iconType = bus.vtype == 'bus' ? 'bus' : 'locomotive'; // 'train' looks nearly identical to bus at rendered size
-    var marker = new google.maps.Marker({ icon: 'http://chart.googleapis.com/chart?chst=d_bubble_icon_text_small&chld=' + iconType + '|bbT|'+bus.routeTag+'|' + directionColor + '|eee', position: busLatLng, map: map });
-    buses[firebaseId] = marker;
+  var busLatLng = new google.maps.LatLng(bus.lat, bus.lon);
+  var directionColor = bus.dirTag && bus.dirTag.indexOf('OB') > -1 ? "7094FF" : "FF6262";
+  var iconType = bus.vtype == 'bus' ? 'bus' : 'locomotive'; // 'train' looks nearly identical to bus at rendered size
+  var marker = new google.maps.Marker({ icon: 'http://chart.googleapis.com/chart?chst=d_bubble_icon_text_small&chld=' + iconType + 
+    '|bbT|'+bus.routeTag+'|' + directionColor + '|eee', position: busLatLng});
+  if(filteredRoutes.length === 0 || filteredRoutes.indexOf(bus.routeTag) >= 0) {
+    marker.setMap(map);
+  }
+  buses[firebaseId] = marker;
+  busesRoutes[firebaseId] = bus.routeTag;
+  if(!routes[bus.routeTag]) {
+    routes[bus.routeTag] = bus.routeTag;
+    updateRouteSelections(bus.routeTag);
+  }
 }
 
 f.once("value", function(s) {
@@ -43,3 +55,65 @@ f.on("child_removed", function(s) {
     delete buses[s.name()];
   }
 });
+
+// UI additons
+$('#routes').on('change', function(e){
+  var $selected = $('#routes option:selected');
+  var routeIds = [];
+  if($selected.length === 0) {
+    updateRouteDisplay('all');
+  } else {
+    //collect route ids and pass them on for diplay
+    for(var i = 0; i < $selected.length; i++) {
+      routeIds.push($selected[i].value);
+    }
+    filteredRoutes = routeIds;
+    updateRouteDisplay(routeIds);
+  }
+});
+
+var updateRouteSelections = function (routeId) {
+  var $selectBox = $('#routes');
+  var $options;
+  $selectBox.append($("<option></option>")
+              .attr("value",routeId)
+              .text(routeId));
+  // resort options
+  $options = $('#routes option');
+  $options = $options.sort(function($a, $b){
+    return ($a.text > $b.text) ? 1 : -1;
+  });
+  $selectBox.empty()
+  $selectBox.append($options);
+}
+
+var updateRouteDisplay = function (routeIds){
+  if (typeof routeIds === 'string') {
+    showAllRoutes();
+  } else {
+    hideAllRoutes();
+    routeIds.forEach(function(routeId){
+      showRouteFor(routeId);
+    });
+  }
+};
+
+var showAllRoutes = function (){
+  for(var bus in buses) {
+    buses[bus].setMap(map);
+  }
+};
+
+var hideAllRoutes = function (){
+  for(var bus in buses) {
+    buses[bus].setMap(null);
+  }
+};
+
+var showRouteFor = function (routeId) {
+  for(var bus in buses) {
+    if(('' + busesRoutes[bus]) === routeId ){
+      buses[bus].setMap(map);
+    }
+  }
+};
