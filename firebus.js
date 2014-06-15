@@ -11,6 +11,8 @@ function initialize() {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+  //get the previously selected options from local storage
+  filteredRoutes = localStorage.getItem('filteredRoutes') || [];
 }
       
 var f = new Firebase("https://publicdata-transit.firebaseio.com/sf-muni/data");
@@ -62,12 +64,14 @@ $('#routes').on('change', function(e){
   var routeIds = [];
   if($selected.length === 0) {
     updateRouteDisplay('all');
+    localStorage.setItem('filteredRoutes', []);
   } else {
     //collect route ids and pass them on for diplay
     for(var i = 0; i < $selected.length; i++) {
       routeIds.push($selected[i].value);
     }
     filteredRoutes = routeIds;
+    localStorage.setItem('filteredRoutes', routeIds);
     updateRouteDisplay(routeIds);
   }
 });
@@ -75,6 +79,7 @@ $('#routes').on('change', function(e){
 var updateRouteSelections = function (routeId) {
   var $selectBox = $('#routes');
   var $options;
+  var selected;
   $selectBox.append($("<option></option>")
               .attr("value",routeId)
               .text(routeId));
@@ -85,6 +90,11 @@ var updateRouteSelections = function (routeId) {
   });
   $selectBox.empty()
   $selectBox.append($options);
+  if(filteredRoutes.indexOf('' + routeId) >= 0) {
+    selected = $selectBox.val() || [];
+    selected.push('' + routeId);
+    $selectBox.val(selected);
+  }
 }
 
 var updateRouteDisplay = function (routeIds){
