@@ -15,7 +15,7 @@ function initialize() {
   filteredRoutes = localStorage.getItem('filteredRoutes') || [];
 }
       
-var f = new Firebase("https://publicdata-transit.firebaseio.com/sf-muni/data");
+var f = new Firebase("https://publicdata-transit.firebaseio.com/sf-muni/vehicles");
 
 function newBus(bus, firebaseId) {
   var busLatLng = new google.maps.LatLng(bus.lat, bus.lon);
